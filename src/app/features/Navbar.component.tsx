@@ -12,9 +12,7 @@ export default function NavbarComponent() {
   ];
 
   return (
-    <Navbar disableAnimation isBordered>
-      
-
+    <Navbar disableAnimation isBordered >
       <NavbarBrand className="gap-4">
       <Avatar src={'img/photo.jpg'} size="md" className="rounded-full" />
         <p className="font-bold text-inherit">Jessica Elberg</p>

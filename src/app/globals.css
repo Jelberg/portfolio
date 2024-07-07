@@ -31,3 +31,19 @@ body {
     text-wrap: balance;
   }
 }
+
+.tracking-tight {
+  letter-spacing: -.025em;
+}
+
+.text-transparent {
+  -webkit-background-clip: text;
+}
+
+.bg-clip-text {
+  background-clip: text;
+}
+
+.bg-image{
+  float: right
+}
