@@ -38,7 +38,7 @@ export default function Home() {
           <h2 className="text-shadow font-bold text-[1.5rem] mb-10">Experiencia Laboral</h2>
         </div>
 
-        <div className="flex flex-col gap-10 md:p-15 ">
+        <div className="flex flex-col gap-10 md:pr-24 md:pl-24 ">
           <table width="100%" >
               <tr>
               <th></th>

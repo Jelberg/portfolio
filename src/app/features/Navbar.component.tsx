@@ -12,7 +12,7 @@ export default function NavbarComponent() {
   ];
 
   return (
-    <Navbar disableAnimation isBordered >
+    <Navbar isBordered >
       <NavbarBrand className="gap-4">
       <Avatar src={'img/photo.jpg'} size="md" className="rounded-full" />
         <p className="font-bold text-inherit">Jessica Elberg</p>
@@ -47,7 +47,7 @@ export default function NavbarComponent() {
             <Link
               className="w-full"
               color={
-                index === 2 ? "warning" : index === menuItems.length - 1 ? "danger" : "foreground"
+                index === 2 ? "primary" : index === menuItems.length - 1 ? "danger" : "foreground"
               }
               href="#"
               size="lg"
