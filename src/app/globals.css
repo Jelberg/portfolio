@@ -38,6 +38,7 @@ body {
 
 .text-transparent {
   -webkit-background-clip: text;
+  background-clip: text;
 }
 
 .bg-clip-text {
@@ -46,4 +47,12 @@ body {
 
 .bg-image{
   float: right
+}
+
+.text-shadow {
+  text-shadow: 0px 0px 30px #fff;
+}
+
+.text-shadow-primary {
+  text-shadow: 0px 1px 7px hsl(var(--nextui-primary));
 }
