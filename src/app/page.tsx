@@ -1,66 +1,73 @@
-'use client'
+'use client';
 
-import { Button } from "@nextui-org/react";
-import { GithubIcon, LinkedinIcon, MailIcon } from "./assets";
-import {Image} from "@nextui-org/image";
-import data_experience from "./data/mock-experience";
-
+import BoxComponent from './features/Box.component';
+import { Image } from '@heroui/react';
+import { MoreIcon } from './assets/MoreIcon';
 
 export default function Home() {
-
-  return (
-    <div>
-      <main className="flex">
-        <section className="">
-          <div className="flex flex-col gap-4 p-8 lg:p-48 ">
-            <div className="inline-block justify-center">
-              <h1 className="tracking-tight font-bold inline text-[2.5rem] lg:text-5xl">{`Hello! I'm`}</h1>
-              <h1  className="tracking-tight inline font-bold from-[#903dae] to-[#07bbfd] text-[2.5rem] lg:text-5xl bg-clip-text text-transparent bg-gradient-to-b"> Jessica</h1>
-            </div>
-            <div className="inline-block">
-              <p className="inline">{`I'm a `}</p>
-              <p className="inline">{`software engineer`}</p>
-              <p className="inline">{`, I love to build things and I'm always looking for new challenges.`}</p>
-            </div>
-            <div className="flex flex-col md:flex-row gap-4 ">
-              <Button startContent={<MailIcon />} variant="bordered">Contact me</Button>
-              <Button startContent={<LinkedinIcon />}  variant="bordered">Linkedin</Button>
-              <Button startContent={<GithubIcon />}  variant="bordered">Github</Button>
-            </div>
-          </div>
-          <div className="absolute w-full h-full bg-image ">
-            <Image className="fixed top-0 right-0 bg-image float-right" src={"/img/ligth-blue.png"} width={`15%`} height={`15%`} alt="light-blue" />
-          </div>  
-        </section>
-       </main>
-       <section className="flex flex-col justify-center items-center mr-10 ml-10 lg:mr-60 lg:ml-60">
+    return (
         <div>
-          <h2 className="text-shadow font-bold text-[1.5rem] mb-10">Experiencia Laboral</h2>
-        </div>
-
-        <div className="flex flex-col gap-10 md:pr-24 md:pl-24 ">
-          <table width="100%" >
-              <tr>
-              <th></th>
-              <th></th>
-              </tr>
-              {data_experience.map((experience: any, index:number) => (<tr key={index}>
-                <td  valign="middle" align="left" className="pb-8">
-                <div className="pl-4 border-l-2 ">
-                  <p className="font-bold text-[1.1rem]">{experience.position}</p>
-                  <p className="font-bold text-primary text-[1.3rem]">{experience.company}</p>
-                  <p className="font-bold text-[0.7rem]">{experience.date}</p>
+            <main className="mx-auto max-w-[70rem] px-4 md:px-8 flex flex-col gap-4 justify-center">
+                <div className="grid grid-flow-col grid-rows-3 gap-4">
+                    <div className="row-span-3">
+                        <BoxComponent className="flex gap-5 mx-auto">
+                            <Image
+                                className="rounded-tl-2xl rounded-br-2xl"
+                                src={'img/photo.jpg'}
+                                alt="Jessica Elberg"
+                                width={200}
+                            />
+                            <div className="flex flex-col gap-4 justify-between">
+                                <h4 className="uppercase font-light text-gray-500 text-sm tracking-[0.5em]">
+                                    FullStack Developer
+                                </h4>
+                                <h2 className="text-4xl font-bold">
+                                    Jessica Elberg.
+                                </h2>
+                                <p className="text-gray-300 mt-4 overflow-auto text-balance max-w-2xl">
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Dolorum, voluptate.
+                                </p>
+                                <div className="flex flex-row justify-end">
+                                    <MoreIcon className="text-gray-500 hover:text-white transition-all duration-300" />
+                                </div>
+                            </div>
+                        </BoxComponent>
+                    </div>
+                    <div className="col-span-4">
+                        <BoxComponent className="flex gap-5 w-full h-full">
+                            01
+                        </BoxComponent>
+                    </div>
+                    <div className="col-span-2 row-span-2">
+                        <BoxComponent className="flex gap-5 w-full h-full">
+                            02
+                        </BoxComponent>
+                    </div>
+                    <div className="col-span-2 row-span-2">
+                        <BoxComponent className="flex gap-5 w-full h-full">
+                            03
+                        </BoxComponent>
+                    </div>
                 </div>
-              </td>
-              <td  valign="middle" align="left" >
-                <div className="mt-5 ml-2 md:mt-0">
-                  <p>{experience.description}</p>
-                </div>  
-                </td>
-              </tr>))}
-            </table>
-          </div>
-       </section>
-    </div>
-  );
+                <div className="grid grid-flow-col grid-rows-3 gap-4">
+                    <div className="col-span-2 row-span-3">
+                        <BoxComponent className="flex gap-5 w-full h-full">
+                            04
+                        </BoxComponent>
+                    </div>
+                    <div className="col-span-3 row-span-3">
+                        <BoxComponent className="flex gap-5 w-full h-full">
+                            05
+                        </BoxComponent>
+                    </div>
+                    <div className="col-span-2 row-span-3">
+                        <BoxComponent className="flex gap-5 w-full h-full">
+                            06
+                        </BoxComponent>
+                    </div>
+                </div>
+            </main>
+        </div>
+    );
 }
