@@ -29,7 +29,7 @@ export default function Home() {
                                 height={180}
                             />
                             <div className="flex flex-col gap-4 justify-between">
-                                <h4 className="uppercase font-light text-gray-500 text-sm tracking-[0.5em]">
+                                <h4 className="uppercase font-mono text-gray-300 text-sm tracking-[0.5em] ">
                                     FullStack Developer
                                 </h4>
                                 <p className="text-4xl font-bold">
@@ -68,9 +68,9 @@ export default function Home() {
                             onMouseLeave={() => setHoveredIndex(null)}
                         >
                             <Image
-                                className="rounded-tl-2xl rounded-br-2xl"
+                                className="rounded-tl-2xl rounded-br-2xl drop-shadow-lime-50 drop-shadow-xl"
                                 src={'/img/works.png'}
-                                alt="Jessica Elberg"
+                                alt="Projects"
                                 width={180}
                                 height={180}
                             />
