@@ -32,9 +32,9 @@ export default function Home() {
                                 <h4 className="uppercase font-light text-gray-500 text-sm tracking-[0.5em]">
                                     FullStack Developer
                                 </h4>
-                                <h2 className="text-4xl font-bold">
+                                <p className="text-4xl font-bold">
                                     Jessica Elberg.
-                                </h2>
+                                </p>
                                 <p className="text-gray-300 mt-4 overflow-auto text-balance max-w-2xl">
                                     Lorem ipsum dolor sit amet consectetur
                                     adipisicing elit. Dolorum, voluptate.
@@ -52,7 +52,7 @@ export default function Home() {
                             onMouseEnter={() => setHoveredIndex(2)}
                             onMouseLeave={() => setHoveredIndex(null)}
                         >
-                            <ArrowIcon hover={hoveredIndex === 2} />
+                            01
                         </BoxComponent>
                     </div>
                     <div className="col-span-2 row-span-2">
@@ -61,8 +61,30 @@ export default function Home() {
                         </BoxComponent>
                     </div>
                     <div className="col-span-2 row-span-2">
-                        <BoxComponent className="flex gap-5 w-full h-full">
-                            03
+                        <BoxComponent
+                            className="flex flex-col gap-5 w-full h-full  items-center"
+                            key={4}
+                            onMouseEnter={() => setHoveredIndex(4)}
+                            onMouseLeave={() => setHoveredIndex(null)}
+                        >
+                            <Image
+                                className="rounded-tl-2xl rounded-br-2xl"
+                                src={'/img/works.png'}
+                                alt="Jessica Elberg"
+                                width={180}
+                                height={180}
+                            />
+                            <div className="flex gap-5">
+                                <div>
+                                    <h3 className="font-light text-gray-500 text-sm tracking-[0.5em] uppercase">
+                                        Showcase
+                                    </h3>
+                                    <h2 className="text-2xl text-primary font-bold uppercase">
+                                        Proyects
+                                    </h2>
+                                </div>
+                                <ArrowIcon hover={hoveredIndex === 4} />
+                            </div>
                         </BoxComponent>
                     </div>
                 </div>
