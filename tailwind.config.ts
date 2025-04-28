@@ -22,7 +22,7 @@ const config = {
     darkMode: 'class',
     plugins: [
         heroui({
-            //prefix: 'heroui-', // prefix for themes variables
+            //prefix: 'hrui-', // prefix for themes variables
             //addCommonColors: false, // override common colors (e.g. "blue",green,"pink").
             defaultTheme: 'dark', // default theme from the themes object
             //defaultExtendTheme: 'dark', // default theme to extend on custom themes
@@ -35,7 +35,7 @@ const config = {
                 dark: {
                     layout: {}, // dark theme layout tokens
                     colors: {
-                        primary: '#1379F3'
+                        primary: '#e0f11f'
                     } // dark theme colors
                 } // ... custom themes
             }
